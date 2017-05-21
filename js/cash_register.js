@@ -13,11 +13,10 @@ var nums = [];
 
 var num1 = 0;
 var num2 = 0;
-<<<<<<< HEAD
+
 
 var calculation;
-=======
->>>>>>> bef954ca856dc40c4eb9678f31f837517f5c9ff2
+
 //caculation buttons
 var add = document.querySelector('#add');
 var subtract = document.querySelector('#subtract');
@@ -38,105 +37,91 @@ var numbers = document.querySelectorAll('.number-container button');
 
 //functions
 for (var i = 0; i < numbers.length; i++) {
-	numbers[i].addEventListener('click', function(event){
-		// display.innerHTML=event.currentTarget.value;
+  numbers[i].addEventListener('click', function(event) {
+    // display.innerHTML=event.currentTarget.value;
 
-			nums.push(event.currentTarget.value);
-			display.innerHTML = parseFloat(nums.join(""));
+    nums.push(event.currentTarget.value);
+    display.innerHTML = parseFloat(nums.join(""));
 
-	});
+  });
 }
+
 function clearAll() {
-	display.innerHTML = '0';
-	nums = [];
+  display.innerHTML = '0';
+  nums = [];
 }
 
-add.addEventListener('click' ,function(event){
-  	num1 = parseFloat(nums.join(""));
-    calculation="add";
-    clearAll();
+add.addEventListener('click', function(event) {
+  num1 = parseFloat(nums.join(""));
+  calculation = "add";
+  clearAll();
 
 })
-subtract.addEventListener('click' ,function(event){
-  	num1 = parseFloat(nums.join(""));
-    clearAll();
-calculation="subtract";
+subtract.addEventListener('click', function(event) {
+  num1 = parseFloat(nums.join(""));
+  clearAll();
+  calculation = "subtract";
 })
-multiply.addEventListener('click' ,function(event){
-  	num1 = parseFloat(nums.join(""));
-    calculation="multiply";
-    clearAll();
+multiply.addEventListener('click', function(event) {
+  num1 = parseFloat(nums.join(""));
+  calculation = "multiply";
+  clearAll();
 
 })
-divide.addEventListener('click' ,function(event){
-  	num1 = parseFloat(nums.join(""));
-    calculation="divide";
-    clearAll();
+divide.addEventListener('click', function(event) {
+  num1 = parseFloat(nums.join(""));
+  calculation = "divide";
+  clearAll();
 })
-equal.addEventListener('click' ,function(event){
-  	num2 = parseFloat(nums.join(""));
-    console.log(num2);
-    console.log(calculation);
-    console.log(num1);
-    if (calculation==="add") {
-      memory=calculator.add(num1,num2);
-      display.innerHTML=memory;
+equal.addEventListener('click', function(event) {
+  num2 = parseFloat(nums.join(""));
+  console.log(num2);
+  console.log(calculation);
+  console.log(num1);
+  if (calculation === "add") {
+    memory = calculator.add(num1, num2);
+    display.innerHTML = memory;
 
 
-    }else if (calculation==="subtract") {
-      memory=calculator.subtract(num1,num2);
-      display.innerHTML=memory;
+  } else if (calculation === "subtract") {
+    memory = calculator.subtract(num1, num2);
+    display.innerHTML = memory;
 
-  }else if (calculation==="multiply") {
-    memory=calculator.multiply(num1,num2);
-    display.innerHTML=memory;
+  } else if (calculation === "multiply") {
+    memory = calculator.multiply(num1, num2);
+    display.innerHTML = memory;
 
-}else if (calculation==="divide") {
-  memory=calculator.divide(num1,num2);
-  display.innerHTML=memory;
-  console.log(memory)
-}
+  } else if (calculation === "divide") {
+    memory = calculator.divide(num1, num2);
+    display.innerHTML = memory;
+  }
 
 })
 
 
 display.innerHTML = '$0.00';
 
-//functions
-function clearAll() {
-	display.innerHTML = '$0.00';
-	nums = [];
-}
+
 
 clear.addEventListener('click', clearAll);
 
 getBalance.addEventListener('click', function(event) {
-	display.innerHTML = total;
+  display.innerHTML = total;
 });
 
 depositCash.addEventListener('click', function(event) {
 
-	num1 = parseFloat(nums.join(""));
+  num1 = parseFloat(nums.join(""));
 
-	total = calculator.add(total, memory);
+  total = calculator.add(total, memory);
 
-	total = calculator.add(total, num1);
+  total = calculator.add(total, num1);
 
-	clearAll();
+  clearAll();
 });
 
 withdrawCash.addEventListener('click', function(event) {
-	num1 = parseFloat(nums.join(""));
-	total = calculator.subtract(total, num1);
-	clearAll();
+  num1 = parseFloat(nums.join(""));
+  total = calculator.subtract(total, num1);
+  clearAll();
 });
-
-for (var i = 0; i < numbers.length; i++) {
-	numbers[i].addEventListener('click', function(event){
-		// display.innerHTML=event.currentTarget.value;
-
-			nums.push(event.currentTarget.value);
-			display.innerHTML = parseFloat(nums.join(""));
-
-	});
-}
