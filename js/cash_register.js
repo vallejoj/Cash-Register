@@ -31,10 +31,12 @@ var numbers = document.querySelectorAll('.number-container button');
 display.innerHTML = '$0.00';
 
 //functions
-clear.addEventListener('click', function clearAll () {
+function clearAll() {
 	display.innerHTML = '$0.00';
 	nums = [];
-});
+}
+
+clear.addEventListener('click', clearAll);
 
 getBalance.addEventListener('click', function(event) {
 	display.innerHTML = total;
@@ -48,7 +50,9 @@ depositCash.addEventListener('click', function(event) {
 });
 
 withdrawCash.addEventListener('click', function(event) {
-
+	num1 = parseFloat(nums.join(""));
+	total = calculator.subtract(total, num1);
+	clearAll();
 });
 
 for (var i = 0; i < numbers.length; i++) {
