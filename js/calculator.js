@@ -36,12 +36,22 @@ function calculatorModule() {
     memory = 0;
     return memory;
   }
+  function recallMemory() {
+    return memory;
+  }
+
+  function saveMemory() {
+    memory = total;
+    return memory;
+  }
   return {
     getTotal: getTotal,
     add: add,
     subtract: subtract,
     multiply: multiply,
     divide: divide,
+    recallMemory:recallMemory,
+    saveMemory:saveMemory,
     clearMemory: clearMemory,
   }
 
