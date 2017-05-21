@@ -13,8 +13,11 @@ var nums = [];
 
 var num1 = 0;
 var num2 = 0;
+<<<<<<< HEAD
 
 var calculation;
+=======
+>>>>>>> bef954ca856dc40c4eb9678f31f837517f5c9ff2
 //caculation buttons
 var add = document.querySelector('#add');
 var subtract = document.querySelector('#subtract');
@@ -29,6 +32,7 @@ var depositCash = document.querySelector('#deposit-cash');
 var withdrawCash = document.querySelector('#withdraw-cash');
 
 var numbers = document.querySelectorAll('.number-container button');
+
 
 // display.innerHTML = '$0.00';
 
@@ -94,6 +98,16 @@ equal.addEventListener('click' ,function(event){
 }
 
 })
+
+
+display.innerHTML = '$0.00';
+
+//functions
+function clearAll() {
+	display.innerHTML = '$0.00';
+	nums = [];
+}
+
 clear.addEventListener('click', clearAll);
 
 getBalance.addEventListener('click', function(event) {
@@ -103,7 +117,11 @@ getBalance.addEventListener('click', function(event) {
 depositCash.addEventListener('click', function(event) {
 
 	num1 = parseFloat(nums.join(""));
+
 	total = calculator.add(total, memory);
+
+	total = calculator.add(total, num1);
+
 	clearAll();
 });
 
@@ -112,3 +130,13 @@ withdrawCash.addEventListener('click', function(event) {
 	total = calculator.subtract(total, num1);
 	clearAll();
 });
+
+for (var i = 0; i < numbers.length; i++) {
+	numbers[i].addEventListener('click', function(event){
+		// display.innerHTML=event.currentTarget.value;
+
+			nums.push(event.currentTarget.value);
+			display.innerHTML = parseFloat(nums.join(""));
+
+	});
+}
