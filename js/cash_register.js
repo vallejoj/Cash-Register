@@ -9,12 +9,10 @@ var display = document.querySelector('.display');
 var total = 0;
 var memory = 0;
 
-var num1Arr = [];
-var num2Arr = [];
+var nums = [];
 
 var num1 = 0;
 var num2 = 0;
-var temp = [];
 //caculation buttons
 var add = document.querySelector('#add');
 var subtract = document.querySelector('#subtract');
@@ -33,8 +31,9 @@ var numbers = document.querySelectorAll('.number-container button');
 display.innerHTML = '$0.00';
 
 //functions
-clear.addEventListener('click', function (event) {
+clear.addEventListener('click', function clearAll () {
 	display.innerHTML = '$0.00';
+	nums = [];
 });
 
 getBalance.addEventListener('click', function(event) {
@@ -43,11 +42,9 @@ getBalance.addEventListener('click', function(event) {
 
 depositCash.addEventListener('click', function(event) {
 
-	num1 = parseFloat(num1Arr.join(""));
-	console.log(num1);
-	console.log(num1Arr);
+	num1 = parseFloat(nums.join(""));
 	total = calculator.add(total, num1);
-	clear;
+	clearAll();
 });
 
 withdrawCash.addEventListener('click', function(event) {
@@ -58,8 +55,8 @@ for (var i = 0; i < numbers.length; i++) {
 	numbers[i].addEventListener('click', function(event){
 		// display.innerHTML=event.currentTarget.value;
 		
-			num1Arr.push(event.currentTarget.value);
-			display.innerHTML = parseFloat(num1Arr.join(""));
+			nums.push(event.currentTarget.value);
+			display.innerHTML = parseFloat(nums.join(""));
 		
 	});
 }
