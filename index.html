@@ -4,41 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Josh + Alexis' Calculator Register</title>
   <link href="index.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 </head>
 
 <body>
   <div class="calculator">
-    
       <div class="number-container">
+        
         <div class="container">
-          <div class="display"></div>
+          <header class="header">
+            <h1>Cash Register v1</h1>
+          </header>
+          <div class="display">0</div>
           <button class="button digit" type='button' value="7">7</button>
           <button class="button digit" type='button' value="8">8</button>
           <button class="button digit" type='button' value="9">9</button>
-          <button class="button operator" type='button'>÷</button>
+          <button class="button operator" id="divide" type='button'>÷</button>
 
           <button class="button digit" type='button' value="6">6</button>
           <button class="button digit" type='button' value="5">5</button>
           <button class="button digit" type='button' value="4">4</button>
-          <button class="button operator" type='button'>*</button>
+          <button class="button operator" id="multiply" type='button'>*</button>
 
           <button class="button digit" type='button' value="3">3</button>
           <button class="button digit" type='button' value="2">2</button>
           <button class="button digit" type='button' value="1">1</button>
-          <button class="button operator" type='button'>-</button>
+          <button class="button operator" id="subtract" type='button'>-</button>
 
           <button class="button digit"  type='button' value="0">0</button>
           <button class="button digit" type='button' value="00">00</button>
           <button class="button digit" type='button' value='.'>.</button>
-          <button class="button operator" type='button'>+</button>
+          <button class="button operator" id="add" type='button'>+</button>
           <button class="button wide clear" id='clear' type='button'>clear</button>
-          <button class="button operator" type='button'>=</button>
+          <button class="button operator" id="equal" type='button'>=</button>
 
           <button class="button long" id='get-balance' type='button'>get balance</button>
           <button class="button long" id='deposit-cash' type='button'>deposit cash</button>

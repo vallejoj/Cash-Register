@@ -15,7 +15,7 @@
 	}
 
 	.calculator {
-		background: #d8e6d5;
+		background: #898989;
 		border-radius: 15px;
 		box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px rgba(0, 0, 0, 0.3);
 		bottom: 0;
@@ -79,7 +79,7 @@
 	}
 
 	.calculator .header h1 {
-		background: #778899;
+		background: #898989;
 		display: inline-block;
 		font-size: 12px;
 		margin: 0;

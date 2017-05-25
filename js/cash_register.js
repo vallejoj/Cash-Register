@@ -31,7 +31,7 @@ var depositCash = document.querySelector('#deposit-cash');
 var withdrawCash = document.querySelector('#withdraw-cash');
 
 //number buttons
-var numbers = document.querySelectorAll('.number-container button');
+var numbers = document.querySelectorAll('.container button');
 
 //functions
 // For loops through number buttons to check which one was clicked
@@ -120,6 +120,7 @@ equal.addEventListener('click', function(event) {
   	if (calculation === "add") {
   	  memory = calculator.add(num1, num2);
   	  display.innerHTML = memory;
+  	  console.log(display.innerHTML);
 
   	} else if (calculation === "subtract") {
   	  memory = calculator.subtract(num1, num2);
@@ -139,12 +140,16 @@ equal.addEventListener('click', function(event) {
 // Gets the balance of the account
 getBalance.addEventListener('click', function(event) {
   	display.innerHTML = account;
+  	memory = display.innerHTML;
+
 });
 
 // Deposits cash into the account
 depositCash.addEventListener('click', function(event) {
 	var addCash = 0;
-	if(display.innerHTML !== "") {
+	if(memory > 0) {
+		account = calculator.add(account, memory);
+	} else if(display.innerHTML !== "") {
 		addCash = parseFloat(display.innerHTML);
 		if(addCash >= 0) { //can't deposit a negative number
 			account = calculator.add(account, addCash);
@@ -160,8 +165,10 @@ withdrawCash.addEventListener('click', function(event) {
 		subtractCash = parseFloat(display.innerHTML);
 		if(account === 0 && subtractCash > 0) { //account === 0
 			//alert can't withdraw from account
+			alert("You ain't got no money in your account!");
 		} else if(subtractCash > account) { //can't withdraw more money than acc has
 			//alert can't withdraw more money than acc has
+			alert("You can't withdraw more money than you have!");
 		} else { //withdraw cash from account
 			account = calculator.subtract(account, subtractCash);
 		}
