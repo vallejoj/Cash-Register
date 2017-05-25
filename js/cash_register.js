@@ -48,7 +48,7 @@ for (var i = 0; i < numbers.length; i++) {
 
 // Function that clears the display as well as the nums array
 function clearAll() {
-  	display.innerHTML = "";
+  	display.innerHTML = "0";
   	nums = [];
   	memory = 0;
 }
@@ -67,6 +67,7 @@ add.addEventListener('click', function(event) {
   		num1 = memory;
   	}
   	clearAll();
+        display.innerHTML='+';
 });
 
 // After the (-) button is clicked it changes the calculation variable
@@ -80,6 +81,7 @@ subtract.addEventListener('click', function(event) {
   		num1 = memory;
   	}
   	clearAll();
+      display.innerHTML='-';
 });
 
 // After the (*) button is clicked it changes the calculation variable
@@ -93,7 +95,7 @@ multiply.addEventListener('click', function(event) {
   		num1 = memory;
   	}
   	clearAll();
-
+  display.innerHTML='x';
 });
 
 // After the (/) button is clicked it changes the calculation variable
@@ -107,6 +109,7 @@ divide.addEventListener('click', function(event) {
   		num1 = memory;
   	}
   	clearAll();
+  display.innerHTML='÷';
 });
 
 // After the (=) button is clicked it updates num2 and checks what type
