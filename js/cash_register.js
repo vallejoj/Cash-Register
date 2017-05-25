@@ -95,7 +95,7 @@ multiply.addEventListener('click', function(event) {
   		num1 = memory;
   	}
   	clearAll();
-  display.innerHTML='x';
+  display.innerHTML='*';
 });
 
 // After the (/) button is clicked it changes the calculation variable
