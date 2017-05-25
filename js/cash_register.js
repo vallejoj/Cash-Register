@@ -50,6 +50,7 @@ for (var i = 0; i < numbers.length; i++) {
 function clearAll() {
   	display.innerHTML = "";
   	nums = [];
+  	memory = 0;
 }
 
 // When clicked it will call the clearAll() function
@@ -99,7 +100,7 @@ multiply.addEventListener('click', function(event) {
 // to signify that an division equation will be performed and changes
 // the value of num1
 divide.addEventListener('click', function(event) {
-	calculation = "add";
+	calculation = "divide";
   	if(memory === 0) {
   		num1 = parseFloat(display.innerHTML);
   	} else {
