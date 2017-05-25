@@ -120,7 +120,6 @@ equal.addEventListener('click', function(event) {
   	if (calculation === "add") {
   	  memory = calculator.add(num1, num2);
   	  display.innerHTML = memory;
-  	  console.log(display.innerHTML);
 
   	} else if (calculation === "subtract") {
   	  memory = calculator.subtract(num1, num2);
