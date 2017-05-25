@@ -4,48 +4,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cash Register</title>
 </head>
 
 <body>
-  <header>The Best Calculator Register Thing!</header>
-  <h1 id="display"></h1>
-  <div class="display"></div>
-  <div class="number-container">
-    <div class="container">
-      <button id='seven' type='button' value="7">7</button>
-      <button id='eight' type='button' value="8">8</button>
-      <button id='nine' type='button' value="9">9</button>
-      <button id='divide' type='button'>÷</button>
-    </div>
-    <div class="container">
-      <button id='six' type='button' value="6">6</button>
-      <button id='five' type='button' value="5">5</button>
-      <button id='four' type='button' value="4">4</button>
-      <button id='multiply' type='button'>*</button>
-    </div>
-    <div class="container">
-      <button id='three' type='button' value="3">3</button>
-      <button id='two' type='button' value="2">2</button>
-      <button id='one' type='button' value="1">1</button>
-      <button id='subtract' type='button'>-</button>
-    </div>
-    <div class="container">
-      <button id='zero' value="0" type='button'>0</button>
-      <button id='doubleZero' value="00" type='button'>00</button>
-      <button id='period' value='.' type='button'>.</button>
-      <button id='add' type='button'>+</button>
-    </div>
-    <button id='equal' type='button'>=</button>
-  </div>
+  <header>Worlds Best Calculator</header>
+  <div class="calc">
+  <div class="jumbotron flex-container wrapper row-fluid">
 
-  <div class="button-container">
-    <button id='clear' type='button'>clear</button>
-    <button id='get-balance' type='button'>get balance</button>
-    <button id='deposit-cash' type='button'>deposit cash</button>
-    <button id='withdraw-cash' type='button'>withdraw cash</button>
-  </div>
+    <div class="display">
+
+    </div>
+
+    <div class="number-container">
+      <div class="button1">
+        <div class="container">
+          <button id='seven' type='button' value="7">7</button>
+          <button id='eight' type='button' value="8">8</button>
+          <button id='nine' type='button' value="9">9</button>
+          <button id='divide' type='button' value="/">÷</button>
+        </div>
+        <div class="container">
+          <button id='six' type='button' value="6">6</button>
+          <button id='five' type='button' value="5">5</button>
+          <button id='four' type='button' value="4">4</button>
+          <button id='multiply' type='button' value="x">*</button>
+        </div>
+        <div class="container">
+          <button id='three' type='button' value="3">3</button>
+          <button id='two' type='button' value="2">2</button>
+          <button id='one' type='button' value="1">1</button>
+          <button id='subtract' type='button' value="-">-</button>
+        </div>
+        <div class="container">
+          <button id='zero' type='button' value="0">0</button>
+          <button id='doubleZero' type='button' value="00">00</button>
+          <button id='period' type='button' value='.'>.</button>
+          <button id='add' type='button' value="+">+</button>
+        </div>
+        <div class="container">
+          <button id='equal' type='button'>=</button>
+          <button id='clear' type='button'>clear</button>
+        </div>
+      </div>
+      </div>
+<div/>
+
+  
+
+</div>
+</div>
   <script src="js/calculator.js"></script>
   <script src="js/cash_register.js"></script>
 
