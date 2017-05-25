@@ -145,8 +145,6 @@ getBalance.addEventListener('click', function(event) {
 
 // Deposits cash into the account
 depositCash.addEventListener('click', function(event) {
-	console.log("display"+display.innerHTML);
-	console.log("memory"+memory);
 	var addCash = 0;
 	if(memory > 0) {
 		account = calculator.add(account, memory);
