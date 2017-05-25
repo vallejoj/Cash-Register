@@ -135,15 +135,7 @@
 		background: #b80000;
 		width: 98%;
 	}
-
-	.calculator .button.tall {
-		height: 26.5%;
-	}
-
-	.calculator .button.right {
-		float: right;
-	}
-
+	
 	.calculator .display {
 		background: #333;
 		box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15) inset;

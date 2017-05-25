@@ -140,15 +140,17 @@ equal.addEventListener('click', function(event) {
 // Gets the balance of the account
 getBalance.addEventListener('click', function(event) {
   	display.innerHTML = account;
-  	memory = display.innerHTML;
-
+  	memory = account;
 });
 
 // Deposits cash into the account
 depositCash.addEventListener('click', function(event) {
+	console.log("display"+display.innerHTML);
+	console.log("memory"+memory);
 	var addCash = 0;
 	if(memory > 0) {
 		account = calculator.add(account, memory);
+		addCash = memory;
 	} else if(display.innerHTML !== "") {
 		addCash = parseFloat(display.innerHTML);
 		if(addCash >= 0) { //can't deposit a negative number
