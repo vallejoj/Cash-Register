@@ -8,66 +8,49 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cash Register</title>
+  <title>Josh + Alexis' Calculator Register</title>
+  <link href="index.css" rel="stylesheet">
 </head>
 
 <body>
+  <div class="calculator">
 
-  <div class="calc">
-  <div class="jumbotron flex-container wrapper row-fluid">
+      <div class="number-container">
+        <div class="container">
+          <header class="header">
+            <h1>Cash Register v1</h1>
+          </header>
+          <div class="display"></div>
+          <button class="button digit" type='button' value="7">7</button>
+          <button class="button digit" type='button' value="8">8</button>
+          <button class="button digit" type='button' value="9">9</button>
+          <button class="button operator" id='clear'type='button' value="÷">÷</button>
 
-    <div class="display">
+          <button class="button digit" type='button' value="6">6</button>
+          <button class="button digit" type='button' value="5">5</button>
+          <button class="button digit" type='button' value="4">4</button>
+          <button class="button operator" id='multiply'type='button' value="*">*</button>
 
-    </div>
+          <button class="button digit" type='button' value="3">3</button>
+          <button class="button digit" type='button' value="2">2</button>
+          <button class="button digit" type='button' value="1">1</button>
+          <button class="button operator" id='subtract'type='button'  value="-">-</button>
 
-    <div class="number-container">
-      <div class="button1">
-        <div class="container">
-          <button id='seven' type='button' value="7">7</button>
-          <button id='eight' type='button' value="8">8</button>
-          <button id='nine' type='button' value="9">9</button>
-          <button id='divide' type='button' value="/">÷</button>
-        </div>
-        <div class="container">
-          <button id='six' type='button' value="6">6</button>
-          <button id='five' type='button' value="5">5</button>
-          <button id='four' type='button' value="4">4</button>
-          <button id='multiply' type='button' value="x">*</button>
-        </div>
-        <div class="container">
-          <button id='three' type='button' value="3">3</button>
-          <button id='two' type='button' value="2">2</button>
-          <button id='one' type='button' value="1">1</button>
-          <button id='subtract' type='button' value="-">-</button>
-        </div>
-        <div class="container">
-          <button id='zero' type='button' value="0">0</button>
-          <button id='doubleZero' type='button' value="00">00</button>
-          <button id='period' type='button' value='.'>.</button>
-          <button id='add' type='button' value="+">+</button>
-        </div>
-        <div class="container">
-          <button id='equal' type='button'>=</button>
-          <button id='clear' type='button'>clear</button>
+          <button class="button digit"  type='button' value="0">0</button>
+          <button class="button digit" type='button' value="00">00</button>
+          <button class="button digit" type='button' value='.'>.</button>
+          <button class="button operator" type='button' id='add' value="+">+</button>
+          <button class="button wide clear" id='clear' type='button'>clear</button>
+          <button class="button operator" id='equal'type='button'>=</button>
+
+          <button class="button long" id='get-balance' type='button'>get balance</button>
+          <button class="button long" id='deposit-cash' type='button'>deposit cash</button>
+          <button class="button long" id='withdraw-cash' type='button'>withdraw cash</button>
         </div>
       </div>
-<div class="button-container .col-md-">
-
-      <button id='get-balance' type='button'>Balance</button>
-      <button id='deposit-cash' type='button'>Deposit</button>
-      <button id='withdraw-cash' type='button'>Withdraw</button>
-</div>
-      </div>
-<div/>
-
-
-
-</div>
-</div>
+  </div>
   <script src="js/calculator.js"></script>
   <script src="js/cash_register.js"></script>
-
-
 </body>
 
 </html>
